@@ -1,0 +1,43 @@
+<div class="row mt-5">
+  <div class="col-md-6 m-auto">
+    <div class="card card-body text-center">
+      <h2>Product table</h2>
+      <div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">price</th>
+              <th scope="col">code</th>
+              <th scope="col">type</th>
+            </tr>
+            <div class="ui divided items">
+              <% product.forEach(function(product){ %>
+              <tr>
+                <td scope="row"><%- product.name %></td>
+                <td scope="row"><%- product.price %></td>
+                <td scope="row"><%- product.code %></td>
+                <td scope="row"><%- product.type %></td>
+              </tr>
+              <% }) %>
+            </div>
+          </thead>
+        </table>
+
+        <div>
+          <ul class="pagination">
+            <% for (page = 1; page <= countSend; page++) { %>
+            <li class="page-item">
+              <a
+                class="page-link"
+                href="/api/product/type/<%= page %>?type=<%= type %>"
+                ><%= page %></a
+              >
+            </li>
+            <% } %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
