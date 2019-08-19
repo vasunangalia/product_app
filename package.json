@@ -1,12 +1,12 @@
 {
   "name": "productapp",
   "version": "1.0.0",
-  "description": "",
+  "description": "product app",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "",
+  "author": "vasu",
   "license": "ISC",
   "dependencies": {
     "config": "^3.2.2",
